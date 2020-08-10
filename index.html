@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="css/maquetado.css">
+</head>
+
+<body>
+  <div id="contenedor">
+    <div id="cabezal" class="clearfix">
+      <img id="logo" src="img/logo.png" alt="logo">
+      <ul id="navPrincipal">
+        <li>
+          <!-- Ingresar -->
+          <a id="cabLogin">Ingresar</a>
+          <a id="cabLogout" hidden>Cerrar Sesion</a>
+        </li>
+      </ul>
+      <div id="aux">
+        <!-- Menu de navegacion -->
+        <!-- Menu para el admin-->
+        <a id="auxRegColab" class="auxAdmin"> Registrar Colaboradores</a>
+        <a id="auxGestColab" class="auxAdmin"> Gestionar Colaboradores</a>
+        <a id="auxObtReps" class="auxAdmin"> Obtener Reportes</a>
+        <br>
+
+        <!--  Menu para admin y colabs-->
+        <a id="auxPubRec" class="auxColab">Publicar Recetas</a>
+
+        <!-- solo para usuario comun -->
+        <a id="auxVerRec" class="auxReceta">Ver Recetas</a>
+        <a id="auxBusRec" class="auxReceta">Buscar Recetas</a>
+      </div><!-- FIN AUX -->
+    </div><!-- FIN CABEZAL -->
+
+    <div id="contenido">
+      <!-- INICIAR SESION -->
+      <div id="divLogin" class="seccion">
+        <h3>Ingresar</h3>
+
+        <label>Usuario</label>
+        <input type="text" id="txtLoginUsuario"> <br>
+        <label>Contraseña</label>
+        <input type="password" id="txtLoginPassword"> <br> <br>
+
+        <input type="button" id="btnLogin" value="Iniciar Sesion"> <br> <br>
+      </div>
+
+      <div id="divAdmin">
+        <!-- REGISTRAR COLABS -->
+        <div id="divRegColab" class="seccion">
+          <h3>Registrar Colaboradores</h3>
+
+          <label>Nombre</label>
+          <input type="text" id="txtRegColabNom"> <br>
+          <label>Apellido</label>
+          <input type="text" id="txtRegColabApe"> <br> <br>
+          <input type="button" id="btnRegColab" value="Registrar"> 
+          <label id="lblBtnRegColabMsg" class="msgVerde">msg verde</label>
+          <br> <br>
+        </div>
+
+        <!-- GESTIONAR COLABS -->
+        <div id="divGestColab" class="seccion">
+          <h3>Gestionar Colaboradores</h3>
+
+          <table border="1" id="tblGestColab">
+          </table>
+        </div>
+
+        <!-- OBTENER REPORTES -->
+        <div id="divObtReps" class="seccion">
+          <h3>Obtener Reportes</h3>
+          <input type="text" id="txtRepTiempo" placeholder="Tiempo (mins)">
+          <input type="button" id="btnRepBuscar" value="Buscar"> <br> <br>
+          <p id="pObtReps" hidden>No hay resultados</p>
+
+          <table border="1" id="tblReportes" hidden>
+          </table>
+        </div>
+      </div>
+
+      <!-- BUSCAR RECETAS -->
+      <div id="divBusRec" class="seccion">
+        <h2>Buscar Recetas</h2>
+        <br><br><br>
+        <label for="txtTextoRecetas"></label>
+        <input placeholder="Buscar por titulo, preparacion, tiempo" type="text" id="txtTextoRecetas">
+
+        <input type="button" value="Buscar" id="btnBuscarRecetas"><br>
+
+        <p id="pBusRec"></p>
+      </div>
+
+      <!-- PUBLICAR RECETAS -->
+      <div id="divPubRec" class="seccion">
+        <h2>Publicar Recetas</h2>
+
+        <br><br><br><br>
+        <input placeholder="Titulo Receta" type="text" id="txtTituloReceta">
+        <label for="txtTituloReceta"></label><br>
+        <input placeholder="Tiempo de preparacion" type="text" id="txtTiempoP">
+        <label for="txtTiempoP"></label><br>
+        <textarea placeholder="Elaboracion(Max 150 caracteres)" id="txtPasos" rows="10" cols="50"></textarea><br>
+        <label for="txtPasos"></label><br>
+        <input type="file" id="fileIngRec"><br><br>
+        <img src="" id="imgIngRec">
+
+        <input type="button" value="Ingresar Receta" id="btnIngresarReceta">       
+        <br>
+
+      </div>
+
+      <!-- VER RECETAS -->
+      <div id="divVerRec" class="seccion">
+        <p id="pMostrarRecetas"></p>
+      </div>
+
+
+    </div><!-- FIN CONTENIDO -->
+    <div id="pie">
+      <a href="https://www.freepik.com/free-photos-vectors/logo">Logo vector created by freepik - www.freepik.com</a>
+    </div><!-- FIN PIE -->
+  </div><!-- FIN CONTENEDOR -->
+
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/usuarios.js"></script>
+  <script src="js/Receta.js"></script>
+  <script src="js/index.js"></script>
+
+  <label></label>
+</body>
+
+</html>
