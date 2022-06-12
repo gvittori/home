@@ -7,9 +7,9 @@ const GAconfig = {
     "client_secret": "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",
     "property_id": 317628904, //nombre: test
     "redirect_uris": [
-        "http://localhost:5500"
+        "https://gvittori.github.io/home/"
     ],
     "javascript_origins": [
-        "http://localhost:5500"
+        "https://gvittori.github.io/home/
     ]
 };
