@@ -6,6 +6,8 @@ function gapiInit() {
     clientId: GAconfig.client_id,
     scope: GAconfig.scopes
   })
+
+  console.log("--gapi init--");
 }
 
 // Query the API and print the results to the page.
