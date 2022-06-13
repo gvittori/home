@@ -39,4 +39,5 @@ function queryReports() {
 function displayResults(response) {
   var formattedJson = JSON.stringify(response.result, null, 2);
   document.getElementById('query-output').value = formattedJson;
+  console.log(formattedJson);
 }
