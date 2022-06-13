@@ -1,18 +1,12 @@
-//let randClientId = Math.round(Math.random() * 2147483647);
-
-let excelURL = "https://docs.google.com/spreadsheets/d/11mdkanRkRTlNKZEWooBsmKYzKnqFT9KOeRvxToFkRoE/edit#gid=0";
-
-// Replace with your client ID from the developer console.
-let CLIENT_ID = GAconfig.client_id;
 // Set authorized scope.
-let SCOPES = [
-  'https://www.googleapis.com/auth/analytics',
-  'https://www.googleapis.com/auth/analytics.readonly',
-  'https://www.googleapis.com/auth/cloud-platform.read-only',
-
-];
-// Replace with your view ID.
-var VIEW_ID = '<REPLACE_WITH_VIEW_ID>';
+function gapiInit() {
+  gapi.client.init({
+    apiKey: GAconfig.apiKey,
+    discoveryDocs: [],
+    clientId: GAconfig.client_id,
+    scope: GAconfig.scopes
+  })
+}
 
 // Query the API and print the results to the page.
 function queryReports() {
@@ -26,7 +20,7 @@ function queryReports() {
           viewId: VIEW_ID,
           dateRanges: [
             {
-              startDate: '7daysAgo',
+              startDate: '30daysAgo',
               endDate: 'today'
             }
           ],
