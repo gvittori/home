@@ -5,7 +5,12 @@ let excelURL = "https://docs.google.com/spreadsheets/d/11mdkanRkRTlNKZEWooBsmKYz
 // Replace with your client ID from the developer console.
 let CLIENT_ID = GAconfig.client_id;
 // Set authorized scope.
-let SCOPES = ['https://www.googleapis.com/auth/analytics.readonly'];
+let SCOPES = [
+  'https://www.googleapis.com/auth/analytics',
+  'https://www.googleapis.com/auth/analytics.readonly',
+  'https://www.googleapis.com/auth/cloud-platform.read-only',
+
+];
 // Replace with your view ID.
 var VIEW_ID = '<REPLACE_WITH_VIEW_ID>';
 
