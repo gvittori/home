@@ -9,10 +9,14 @@
 </head>
 
 <body>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <div id="g_id_onload"
+         data-client_id="239948779780-4ksi22d5hh43ls6s0pec8h1r4hnt2u3i.apps.googleusercontent.com""
+         data-callback="handleCredentialResponse">
+    </div>
+
     <!-- The Sign-in button. This will run `queryReports()` on success. -->
-    <!-- <p class="g-signin2" data-onsuccess="queryReports"></p>  -->
-    <!-- <div class="g_id_signin" data-type="standard"></div> -->
-    <div class="g-signin" data-onsuccess="onSignIn"></div>
+    <p class="g-signin2" data-onsuccess="queryReports"></p> 
     
     <button onclick="queryReports()">Test!</button>
     
